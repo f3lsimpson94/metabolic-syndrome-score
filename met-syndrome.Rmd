@@ -1,0 +1,19 @@
+
+Appendix A. Formula to calculate the metabolic syndrome severity score
+Steps to calculate the MetSSS:
+
+1) Censor: set all biomarker values for each individual case that are below the clinical threshold to the clinical threshold
+
+2) Center: subtract relevant clinical threshold from each biomarker value (optional: winsorize to remove any outliers)
+
+3) Standardize: divide each censored and centered biomarker value by the matching standard deviation shown in Table A.1
+
+4) Orthogonalize: post-multiply the normalized data matrix by the component loading matrix shown in Table A.2
+
+5) Standardize: post-multiply by a diagonal matrix comprised of the inverse of the standard deviations of the principal components shown in Table A.3
+
+6) Square: square each individual value
+
+7) Sum: take the sum of the squared values for each individual row
+
+8) Square root: take the square root of the sum of the squared values
